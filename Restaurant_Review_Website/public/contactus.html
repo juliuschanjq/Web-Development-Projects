@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <script>
+    function contactus() {
+        var credentials = new Object();
+
+        credentials.fullname = document.getElementById("fullname").value;
+        credentials.email = document.getElementById("email").value;
+        credentials.phonenumber = document.getElementById("phonenumber").value;
+        credentials.message = document.getElementById("message").value;
+
+        var request = new XMLHttpRequest();
+
+        request.open("POST", "/contactus", true);
+        request.setRequestHeader("Content-Type", "application/json");
+        request.onload = function () {
+            alert(response.message);
+          }
+
+          request.send(JSON.stringify(credentials));
+        }
+    </script>
+  
+    <style>
+        
+        body{
+            font-family: latha;
+            color:white;
+            background: linear-gradient( rgba(0,0,0,0.65),rgba(0,0,0,0.65),rgba(0,0,0,0.38),rgba(0,0,0,0)
+            )
+                ,url(images/restaurant.jpg)no-repeat;
+            background-size: cover;
+            
+        }
+    
+        .box{ width: 900px;
+        float:right;
+        border:1px solid none;}
+        
+        .box ul li{
+            width: 120px;
+            float:left;
+            margin: 10px auto;
+            text-align: center;
+        }
+        
+        .box ul li a{ text-decoration: none;
+        color:darkgray;}
+        
+        .box ul li:hover{ background-color: coral;}
+        .box ul li a:hover{ color:white;}
+        
+        .wd{
+            width: 300px;
+            height: 539px;
+            background-color: black;
+            opacity: 0.9;
+            padding: 55px;
+        }
+        
+        .wd h1{
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 100px;
+        }
+        
+        .wd h4{
+            text-align: justify;
+            color:darkgray;
+            font-weight: normal;
+        }
+    
+        .wd h2{
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: normal;
+            margin: 40px auto;
+        }
+        
+        .opt form , input[type="button"]{
+            background-color: black;
+            color:white;
+            padding:10px;
+            margin:-14px auto;
+            padding-left: 50px;
+            padding-right: 50px;
+            text-align: center;
+        }
+        
+        form, input[type="button"]:hover{background-color: green;}
+    </style>
+</head>
+<body>
+    <div class="box">
+    <ul type="none">
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="restaurants.html"> Restaurants</a></li>
+        <li><a href="deals.html"> Deals</a></li>
+        <li><a href="aboutus.html"> About Us</a></li>
+        <li><a href="contactus.html"> Contact Us</a></li>
+        <li><a href="signup.html"> Sign Up</a></li>
+        <li><a href="login.html"> Log In</a></li>
+        </ul>
+    </div>
+
+    <ul>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/contactus.css">
+  </head>
+  <body>
+  <div class="contact-form">
+    <h1>Contact Us</h1>
+    <div class="txtb">
+      <label>Full Name :</label>
+      <input type="text" placeholder="Enter Your Name" id= "fullname">
+    </div>
+
+    <div class="txtb">
+      <label>Email :</label>
+      <input type="email" placeholder="Enter Your Email" id = "email">
+    </div>
+
+    <div class="txtb">
+      <label>Phone Number :</label>
+      <input type="text" placeholder="Enter Your Phone Number" id = "phonenumber">
+    </div>
+
+    <div class="txtb">
+      <label>Message :</label>
+      <textarea> </textarea>
+      <input type = "text" id = "message">
+    </div>
+    <a class="btn" onclick = "contactus()" >Send</a>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!-- this is a structure of Bootstrap Modal -->
+<div class="modal fade" id="restaurantModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-center">
+                <h3 class="modal-title text-light" id="restaurantName">Modal title</h3>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row text-center">
+                    <div class="col-xs-5">
+                        <img class="img-fluid img-thumbnail" id="restaurantPictures">
+                    </div>
+                    <div class="col-xs-7">
+                        <table class="table table-hover table-responsive table-sm">
+                            <tr>
+                                <td><b>Address</b></td>
+                                <td id="address"></td>
+                            </tr>
+                            <tr>
+                                <td><b>Opening Hours</b></td>
+                                <td id="openinghours" style=' width: 200px; word-wrap: break-word;'></td>
+                            </tr>
+                            <tr>
+                                <td><b>Contact Number</b></td>
+                                <td id="number"></td>
+                            </tr>
+                </div>
+                <div class="col-xs-12 px-3"><b>Information </b>
+                    <p id="information"></p>
+                </div>
+                <tr>
+                    <td colspan="2"><button type="button" class="btn btn-warning" id="website"
+                            onClick="linkWebsite()">Restaurant Website</button></td>
+                </tr>
+            </table>
+        </div>
+                <div class="col-xs-12 px-3 text-center">
+                    <iframe src="" frameborder="0" allowfullscreen id="trailer1"></iframe>
+                    <iframe src="" frameborder="0" allowfullscreen id="trailer2"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
