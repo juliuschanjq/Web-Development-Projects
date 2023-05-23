@@ -12,7 +12,7 @@ A website for restaurant reviews that uses HTML and CSS for the front end and Ja
 
 A music player that plays songs from a file link that originates from a Base URL source, created with Android Studio.
 
-It sticks to a minimalist design & features which makes it convenient for users to play music. ![image](https://github.com/juliuschanjq/Web-Development-Projects/assets/113488890/693779ef-d7b4-40e5-a6dc-3d22e2ad2cea)
+It sticks to a minimalist design & features which makes it convenient for users to play music.
 
 ![image](https://github.com/juliuschanjq/Web-Development-Projects/assets/113488890/f726109e-5f55-402d-8105-4fba164cb2fe)
 
