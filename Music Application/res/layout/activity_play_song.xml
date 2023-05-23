@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#070707"
+    android:backgroundTint="#E80E0E0E"
+    tools:context=".PlaySongActivity">
+
+    <ImageView
+        android:id="@+id/imgCoverArt"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="TODO"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/txtSongTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/home" />
+
+    <TextView
+        android:id="@+id/txtSongTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Song Title"
+        android:textAlignment="center"
+        android:textColor="#FBE3E3"
+        android:textSize="24sp"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toTopOf="@+id/txtArtist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Artist"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#EDE5E5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSongTitle" />
+
+    <Button
+        android:id="@+id/btnPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#D12020"
+        android:onClick="playPrevious"
+        android:text="PREV"
+        android:textColorLink="#FF5722"
+        app:icon="@android:drawable/ic_media_previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtArtist"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Button
+        android:id="@+id/btnPlayPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="80dp"
+        android:background="#000000"
+        android:backgroundTint="#43CA43"
+        android:onClick="playOrPauseMusic"
+        android:text="PLAY"
+        app:icon="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+        app:layout_constraintStart_toEndOf="@+id/btnPrevious"
+        app:layout_constraintTop_toBottomOf="@+id/txtArtist"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#1976D2"
+        android:onClick="playNext"
+        android:text="Next"
+        app:icon="@android:drawable/ic_media_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtArtist"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="319dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/black"
+        android:backgroundTint="#7C2712FB"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtArtist" />
+
+    <Button
+        android:id="@+id/btnRepeat"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/repeat_off"
+        android:onClick="repeatSong"
+        android:textColorHighlight="#1C1919"
+        android:textColorLink="#0B0909"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCoverArt" />
+
+    <Button
+        android:id="@+id/btnShuffle"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/shuffle_off"
+        android:onClick="shuffleSong"
+        android:textColor="#0B0A0A"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#151313"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCoverArt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
