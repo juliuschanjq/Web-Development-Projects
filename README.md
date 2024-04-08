@@ -1,6 +1,6 @@
 ## Restaurant Review Website
 
-A website for restaurant reviews that uses HTML and CSS for the front end, Javascript and SQL for the back end with CRUD operations on the database that detects Users reviews & account credentials after signing up & logging in.
+Created a restaurant reviews website during my poly days. Web Stack uses HTML and CSS for the front end, Javascript and SQL for the back end with CRUD operations on the database that detects Users reviews & account credentials after signing up & logging in.
 
 ![Screenshot (4)](https://github.com/juliuschanjq/Web-Development-Projects/assets/113488890/772d8f23-3da9-4a43-9566-d6c06357461c)
 
